@@ -13,7 +13,7 @@ A GitHub Actions workflow runs every weekday at 05:00 UTC (07:00 CEST / 06:00 CE
 1. Fetches news from all sources listed below
 2. Selects the top 5 most relevant articles
 3. Generates a LinkedIn post draft based on the most relevant article
-4. Emails the digest + draft to info@newsky.nl via Gmail SMTP
+4. Emails the digest + draft to luuk@newsky.nl via Gmail SMTP
 
 Script: `scripts/daily_linkedin.py`
 Workflow: `.github/workflows/daily-linkedin.yml`

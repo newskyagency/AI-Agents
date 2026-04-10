@@ -2,7 +2,7 @@
 Daily LinkedIn News & Post Generator for New Sky.
 
 Fetches e-commerce news, selects top 5 articles, generates a LinkedIn post
-draft using Claude, and emails the digest to info@newsky.nl.
+draft using Claude, and emails the digest to luuk@newsky.nl.
 """
 
 import os
@@ -213,7 +213,7 @@ def send_email(html_body: str):
     """Send the digest email via Gmail SMTP."""
     gmail_address = os.environ["GMAIL_ADDRESS"]
     gmail_password = os.environ["GMAIL_APP_PASSWORD"]
-    email_to = os.environ.get("EMAIL_TO", "info@newsky.nl")
+    email_to = os.environ.get("EMAIL_TO", "luuk@newsky.nl")
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"Ochtendupdate e-commerce + LinkedIn draft — {datetime.now().strftime('%d %b %Y')}"

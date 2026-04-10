@@ -28,7 +28,7 @@ Runs every weekday at 05:00 UTC (07:00 CEST / 06:00 CET) via GitHub Actions:
 1. Fetches news from 8 sources (4 Dutch, 4 international)
 2. Selects the top 5 most relevant articles
 3. Generates a LinkedIn post draft using Claude API
-4. Emails the digest + draft to info@newsky.nl via Gmail SMTP
+4. Emails the digest + draft to luuk@newsky.nl via Gmail SMTP
 
 **GitHub Actions secrets required:**
 - `ANTHROPIC_API_KEY` — Claude API key
