@@ -8,12 +8,15 @@ The full agent definition (ICP, post types, brand voice, format template, exampl
 
 ## Automated daily workflow
 
-A scheduled remote trigger (`daily-linkedin-news`) runs every weekday at 05:00 UTC (07:00 CEST / 06:00 CET):
+A GitHub Actions workflow runs every weekday at 05:00 UTC (07:00 CEST / 06:00 CET):
 
 1. Fetches news from all sources listed below
-2. Selects the top 5 most relevant articles (title, source, link, short description)
-3. Generates a LinkedIn post draft based on the most relevant article, choosing the best-fitting post type and theme
-4. Emails the news digest + post draft to info@newsky.nl via Gmail
+2. Selects the top 5 most relevant articles
+3. Generates a LinkedIn post draft based on the most relevant article
+4. Emails the digest + draft to info@newsky.nl via Gmail SMTP
+
+Script: `scripts/daily_linkedin.py`
+Workflow: `.github/workflows/daily-linkedin.yml`
 
 ## News sources
 

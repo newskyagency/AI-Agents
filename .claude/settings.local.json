@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:newsky.nl)",
+      "Bash(python3 -m json.tool)",
+      "Bash(xargs -I{} dirname {})",
+      "Bash(mkdir -p ~/.claude/plugins/marketplaces/claude-plugins-official/plugins/linkedin-newsky/.claude-plugin)",
+      "Bash(mkdir -p ~/.claude/plugins/marketplaces/claude-plugins-official/plugins/linkedin-newsky/skills/linkedin-post/references)",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__select_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__click",
+      "mcp__chrome-devtools__press_key",
+      "WebFetch(domain:www.emerce.nl)",
+      "WebFetch(domain:www.thuiswinkel.org)",
+      "WebFetch(domain:retailtrends.nl)",
+      "WebFetch(domain:www.ecommercenews.nl)",
+      "WebFetch(domain:www.retailtrends.nl)",
+      "mcp__claude_ai_Gmail__gmail_get_profile",
+      "Skill(schedule)",
+      "Bash(curl:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(cp \"/Users/thomasvanzuijlen/Library/CloudStorage/GoogleDrive-thomas@newsky.nl/Gedeelde drives/New Sky Shared /Claude Code/Linkedin/.claude/commands/linkedin-post.md\" /tmp/AI-Agents/.claude/commands/linkedin-post.md)",
+      "Bash(cp \"/Users/thomasvanzuijlen/Library/CloudStorage/GoogleDrive-thomas@newsky.nl/Gedeelde drives/New Sky Shared /Claude Code/Linkedin/.claude/settings.local.json\" /tmp/AI-Agents/.claude/settings.local.json)"
+    ]
+  }
+}
