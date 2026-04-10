@@ -1,0 +1,30 @@
+name: Daily LinkedIn News & Post
+
+on:
+  schedule:
+    # Weekdays at 05:00 UTC (07:00 CEST / 06:00 CET)
+    - cron: "0 5 * * 1-5"
+  workflow_dispatch: # Manual trigger via GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run LinkedIn agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python scripts/daily_linkedin.py
